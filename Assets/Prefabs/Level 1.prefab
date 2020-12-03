@@ -946,6 +946,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chunky Kid
       objectReference: {fileID: 0}
+    - target: {fileID: 6159693662609516894, guid: 60533252123a135469de4cc357d80c8d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6159693662609516894, guid: 60533252123a135469de4cc357d80c8d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6159693662609516894, guid: 60533252123a135469de4cc357d80c8d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6159693662609516894, guid: 60533252123a135469de4cc357d80c8d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6159693662609516894, guid: 60533252123a135469de4cc357d80c8d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6159693662609516894, guid: 60533252123a135469de4cc357d80c8d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6159693662609516894, guid: 60533252123a135469de4cc357d80c8d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60533252123a135469de4cc357d80c8d, type: 3}
 --- !u!4 &8160244459557233649 stripped
