@@ -49,7 +49,11 @@ public class Movement : MonoBehaviour
             //character movement
             rb.MovePosition(rb.position + VelocityRight * Time.fixedDeltaTime);
 
-            
+           /* if (this.transform.rotation != Quaternion.Euler(0, 0, 0))
+            {
+                this.transform.rotation = Quaternion.Euler(0, 0, 0);
+            }*/
+
             //leg animation
             float angle = maxAngleR * Mathf.Sin(Time.time * legSpeed);
             legR.transform.rotation = Quaternion.Euler(0, 0, angle);
@@ -61,12 +65,19 @@ public class Movement : MonoBehaviour
         {
             legR.transform.rotation = Quaternion.Euler(0, 0, 0);
             legL.transform.rotation = Quaternion.Euler(0, 0, 0);
+
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
+            //flip direction
+           /* if (this.transform.rotation != Quaternion.Euler(0, 180, 0))
+            {
+                this.transform.rotation = Quaternion.Euler(0, 180, 0);
+            }*/
             //character movement
             rb.MovePosition(rb.position + VelocityLeft * Time.fixedDeltaTime);
 
+           
             //leg animation
             float angle = maxAngleR * Mathf.Sin(Time.time * legSpeed);
             legR.transform.rotation = Quaternion.Euler(0, 0, angle);
