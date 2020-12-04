@@ -6,8 +6,7 @@ public class Movement : MonoBehaviour
 {
     [Header("Set in Inspector")]
     Rigidbody rb;
-    Rigidbody rbR;
-    Rigidbody rbL;
+   
     public GameObject legR;
     public GameObject legL;
     public float runSpeed = 10f;
@@ -16,6 +15,10 @@ public class Movement : MonoBehaviour
     public Vector3 VelocityRight;
     public Vector3 VelocityLeft;
     public Vector3 VelocityUp;
+
+    public float maxAngleR = 45f;
+    public float maxAngleL = 45f;
+    public float legSpeed = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -44,24 +47,33 @@ public class Movement : MonoBehaviour
             Debug.Log("Right");
             rb.MovePosition(rb.position + VelocityRight * Time.fixedDeltaTime);
 
-            legR.transform.rotation = Quaternion.Euler(0, 0, 45);
-            legL.transform.rotation = Quaternion.Euler(0, 0, -45);
-            if (legR.transform.eulerAngles.z == -45)
-            {
-                legR.transform.rotation = Quaternion.Euler(0, 0, 45);
-                legL.transform.rotation = Quaternion.Euler(0, 0, -45);
-            }
-            if (legR.transform.eulerAngles.z == 45)
-            {
-                legR.transform.rotation = Quaternion.Euler(0, 0, -45);
-                legL.transform.rotation = Quaternion.Euler(0, 0, 45);
-            }
+            /* legR.transform.rotation = Quaternion.Euler(0, 0,45);
+             legL.transform.rotation = Quaternion.Euler(0, 0,-45);*/
 
+            float angle = maxAngleR * Mathf.Sin(Time.time * legSpeed);
+            legR.transform.rotation = Quaternion.Euler(0, 0, angle);
+            float angleL = maxAngleL * Mathf.Sin(Time.time * legSpeed);
+            legL.transform.rotation = Quaternion.Euler(0, 0, -angleL);
+
+        }
+        if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            legR.transform.rotation = Quaternion.Euler(0, 0, 0);
+            legL.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             Debug.Log("LEft");
             rb.MovePosition(rb.position + VelocityLeft * Time.fixedDeltaTime);
+            float angle = maxAngleR * Mathf.Sin(Time.time * legSpeed);
+            legR.transform.rotation = Quaternion.Euler(0, 0, angle);
+            float angleL = maxAngleL * Mathf.Sin(Time.time * legSpeed);
+            legL.transform.rotation = Quaternion.Euler(0, 0, -angleL);
+        }
+        if (Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            legR.transform.rotation = Quaternion.Euler(0, 0, 0);
+            legL.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {

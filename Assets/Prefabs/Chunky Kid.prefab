@@ -765,13 +765,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b36e631c09650b74f895503f127845f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leg1: {fileID: 0}
-  leg2: {fileID: 0}
+  legR: {fileID: 0}
+  legL: {fileID: 0}
   runSpeed: 10
   jumpPower: 10
   VelocityRight: {x: 0, y: 0, z: 0}
   VelocityLeft: {x: 0, y: 0, z: 0}
   VelocityUp: {x: 0, y: 0, z: 0}
+  maxAngleR: 45
+  maxAngleL: 45
+  legSpeed: 10
 --- !u!114 &6157780931419160415
 MonoBehaviour:
   m_ObjectHideFlags: 0
