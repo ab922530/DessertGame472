@@ -20,6 +20,8 @@ public class Movement : MonoBehaviour
     public float maxAngleL = 45f;
     public float legSpeed = 10f;
 
+
+    private bool isGrounded;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,40 +46,50 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            Debug.Log("Right");
+            //character movement
             rb.MovePosition(rb.position + VelocityRight * Time.fixedDeltaTime);
 
-            /* legR.transform.rotation = Quaternion.Euler(0, 0,45);
-             legL.transform.rotation = Quaternion.Euler(0, 0,-45);*/
-
+            
+            //leg animation
             float angle = maxAngleR * Mathf.Sin(Time.time * legSpeed);
             legR.transform.rotation = Quaternion.Euler(0, 0, angle);
             float angleL = maxAngleL * Mathf.Sin(Time.time * legSpeed);
             legL.transform.rotation = Quaternion.Euler(0, 0, -angleL);
 
         }
-        if (Input.GetKeyUp(KeyCode.RightArrow))
+        if (Input.GetKeyUp(KeyCode.RightArrow)) //reset leg pos
         {
             legR.transform.rotation = Quaternion.Euler(0, 0, 0);
             legL.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            Debug.Log("LEft");
+            //character movement
             rb.MovePosition(rb.position + VelocityLeft * Time.fixedDeltaTime);
+
+            //leg animation
             float angle = maxAngleR * Mathf.Sin(Time.time * legSpeed);
             legR.transform.rotation = Quaternion.Euler(0, 0, angle);
             float angleL = maxAngleL * Mathf.Sin(Time.time * legSpeed);
             legL.transform.rotation = Quaternion.Euler(0, 0, -angleL);
         }
-        if (Input.GetKeyUp(KeyCode.LeftArrow))
+        if (Input.GetKeyUp(KeyCode.LeftArrow)) //reset leg pos
         {
             legR.transform.rotation = Quaternion.Euler(0, 0, 0);
             legL.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow) && isGrounded)
         {
-            rb.MovePosition(rb.position + VelocityUp * Time.fixedDeltaTime);
+            rb.AddForce(VelocityUp, ForceMode.Impulse);
+            isGrounded = false;
+            //rb.MovePosition(rb.position + VelocityUp * Time.fixedDeltaTime);
         }
+
+    }
+
+    void OnCollisionStay()
+    {
+        Debug.Log("hello");
+        isGrounded = true;
     }
 }
