@@ -6,8 +6,7 @@ public class Movement : MonoBehaviour
 {
     [Header("Set in Inspector")]
     Rigidbody rb;
-    Rigidbody rbR;
-    Rigidbody rbL;
+   
     public GameObject legR;
     public GameObject legL;
     public float runSpeed = 10f;
@@ -17,6 +16,12 @@ public class Movement : MonoBehaviour
     public Vector3 VelocityLeft;
     public Vector3 VelocityUp;
 
+    public float maxAngleR = 45f;
+    public float maxAngleL = 45f;
+    public float legSpeed = 10f;
+
+
+    private bool isGrounded;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,31 +46,61 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            Debug.Log("Right");
+            //character movement
             rb.MovePosition(rb.position + VelocityRight * Time.fixedDeltaTime);
 
-            legR.transform.rotation = Quaternion.Euler(0, 0, 45);
-            legL.transform.rotation = Quaternion.Euler(0, 0, -45);
-            if (legR.transform.eulerAngles.z == -45)
+           /* if (this.transform.rotation != Quaternion.Euler(0, 0, 0))
             {
-                legR.transform.rotation = Quaternion.Euler(0, 0, 45);
-                legL.transform.rotation = Quaternion.Euler(0, 0, -45);
-            }
-            if (legR.transform.eulerAngles.z == 45)
-            {
-                legR.transform.rotation = Quaternion.Euler(0, 0, -45);
-                legL.transform.rotation = Quaternion.Euler(0, 0, 45);
-            }
+                this.transform.rotation = Quaternion.Euler(0, 0, 0);
+            }*/
+
+            //leg animation
+            float angle = maxAngleR * Mathf.Sin(Time.time * legSpeed);
+            legR.transform.rotation = Quaternion.Euler(0, 0, angle);
+            float angleL = maxAngleL * Mathf.Sin(Time.time * legSpeed);
+            legL.transform.rotation = Quaternion.Euler(0, 0, -angleL);
+
+        }
+        if (Input.GetKeyUp(KeyCode.RightArrow)) //reset leg pos
+        {
+            legR.transform.rotation = Quaternion.Euler(0, 0, 0);
+            legL.transform.rotation = Quaternion.Euler(0, 0, 0);
 
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            Debug.Log("LEft");
+            //flip direction
+           /* if (this.transform.rotation != Quaternion.Euler(0, 180, 0))
+            {
+                this.transform.rotation = Quaternion.Euler(0, 180, 0);
+            }*/
+            //character movement
             rb.MovePosition(rb.position + VelocityLeft * Time.fixedDeltaTime);
+
+           
+            //leg animation
+            float angle = maxAngleR * Mathf.Sin(Time.time * legSpeed);
+            legR.transform.rotation = Quaternion.Euler(0, 0, angle);
+            float angleL = maxAngleL * Mathf.Sin(Time.time * legSpeed);
+            legL.transform.rotation = Quaternion.Euler(0, 0, -angleL);
         }
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKeyUp(KeyCode.LeftArrow)) //reset leg pos
         {
-            rb.MovePosition(rb.position + VelocityUp * Time.fixedDeltaTime);
+            legR.transform.rotation = Quaternion.Euler(0, 0, 0);
+            legL.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
+        if (Input.GetKey(KeyCode.UpArrow) && isGrounded)
+        {
+            rb.AddForce(VelocityUp, ForceMode.Impulse);
+            isGrounded = false;
+            //rb.MovePosition(rb.position + VelocityUp * Time.fixedDeltaTime);
+        }
+
+    }
+
+    void OnCollisionStay()
+    {
+        Debug.Log("hello");
+        isGrounded = true;
     }
 }
