@@ -390,6 +390,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24c3148e2ec41ef4a89619a5161a694f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uitLevel: {fileID: 1942887755}
+  uitPoints: {fileID: 1961758740}
+  uitHighScore: {fileID: 1239460385}
   tables:
   - {fileID: 7224448454916829146, guid: 8b5c5b87dad04f448bef223acf2570b1, type: 3}
   - {fileID: 7224448454916829146, guid: a216c300b48f1b24b82c1419baf78e3b, type: 3}
