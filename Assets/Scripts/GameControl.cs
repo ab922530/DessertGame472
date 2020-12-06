@@ -12,12 +12,15 @@ public class GameControl : MonoBehaviour
     public Text uitLevel;  // The UIText_Level Text
     public Text uitPoints;  // The UIText_Points Text
     public Text uitHighScore; // The UIText_HighScore Text
+    public Text uitLives;
     public GameObject[] tables;   // An array of the levels
 
 
     [Header("Set Dynamically")]
     public int levelMax; // The number of levels
     public static int level; // The current level
+    public static int lives; // Current Lives
+    public static int score; // Current Score
     public GameObject table;
 
     // Start is called before the first frame update
@@ -25,13 +28,18 @@ public class GameControl : MonoBehaviour
     {
         S = this; // Define the Singleton
         level = 0;
+        score = 0;
         levelMax = tables.Length;
+        lives = 3;
         StartLevel();
     }
 
     void UpdateGUI()
     {
         // Show the data in the GUITexts
+        uitLevel.text = "Level: " + (level + 1) + " of " + levelMax;
+        uitLives.text = "Lives: " + lives;
+        uitPoints.text = "Points: " + score;
     }
 
     void Update()

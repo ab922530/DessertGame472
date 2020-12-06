@@ -531,6 +531,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2973952900843417795}
     m_Modifications:
+    - target: {fileID: 4882534091532118374, guid: 797d854cf5094654ebff832449fa315b, type: 3}
+      propertyPath: m_TagString
+      value: EvilVeggie
+      objectReference: {fileID: 0}
     - target: {fileID: 5913711753999709906, guid: 797d854cf5094654ebff832449fa315b, type: 3}
       propertyPath: m_Name
       value: EvilBrocolli Variant 1
