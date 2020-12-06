@@ -4,15 +4,91 @@ using UnityEngine;
 
 public class EvilVeggie : MonoBehaviour
 {
+    public static EvilVeggie S;
+    [Header("Set in Inspector")]
+    public float moveRange = 5.0f;
+    public float moveSpeed = 5.0f;
+    public float jumpHeight = 0.0f;
+    public float deathDuration = 5.0f;
+    [Header("Set Dynmically")]
+    public Vector3 StartingPos;
+    public Vector3 CurrentPos;
+    public Vector3 VelocityRight;
+    public Vector3 VelocityLeft;
+    public bool dead;
+
+    public Vector3 StartScale;
+    public Vector3 DeadScale;
+   // public GameObject hitBox;
     // Start is called before the first frame update
     void Start()
     {
-        
+        S = this;
+        dead = false;
+        StartingPos = this.transform.position;
+        VelocityRight = new Vector3(moveSpeed, 0, 0);
+        VelocityLeft = new Vector3(-moveSpeed, 0, 0);
+        StartScale = this.transform.localScale;
+        DeadScale = new Vector3(this.transform.localScale.x, this.transform.localScale.y, 1);
+
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        // CurrentPos = this.transform.position;
+        
+        move();   
+    }
+
+    void move()
+    {
+
+        if (dead == false)
+        {
+            StartingPos.x = Mathf.PingPong(Time.time * moveSpeed, moveRange);
+            this.transform.position = StartingPos;
+
+            if (jumpHeight > 0)
+            {
+                //jump script
+            }
+        }
+        else
+        {
+            dead = true;
+            StartingPos = this.transform.position;
+            this.transform.position = this.transform.position;
+            float timer = 0.0f;
+            while (timer < deathDuration)
+            {
+                timer += Time.deltaTime;
+                float t = timer / deathDuration;
+                t = t * t * t * (t * (6f * t - 15f) + 10f);
+                this.transform.localScale = Vector3.Lerp(StartScale, DeadScale, t);
+               
+            }
+        
+            Invoke("killVeggie",.1f);
+        }
         
     }
+
+    public static void die()
+    {
+        S.dead = true;
+    }
+
+    public void killVeggie()
+    {
+        
+        dead = true;
+        foreach (Transform child in this.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
+        this.transform.position = new Vector3(1000, 1000, 1000);
+    }
+
 }

@@ -713,9 +713,10 @@ GameObject:
   - component: {fileID: 2190035175742442598}
   - component: {fileID: -4508185317218683571}
   - component: {fileID: 6157780931419160415}
+  - component: {fileID: 728158314972188178}
   m_Layer: 0
   m_Name: Chunky Kid
-  m_TagString: Untagged
+  m_TagString: chunkyKid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -788,6 +789,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35833e66481d3f24ebd1ed7353724662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &728158314972188178
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14547979731208615}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 5}
+  m_Center: {x: 3.2, y: 0, z: 0}
 --- !u!1 &14547979733534077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,7 +1039,7 @@ GameObject:
   - component: {fileID: 3144876304826145492}
   m_Layer: 0
   m_Name: Right Calf
-  m_TagString: Untagged
+  m_TagString: chunkyKid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1152,7 +1166,7 @@ GameObject:
   - component: {fileID: 4435463660662016273}
   m_Layer: 0
   m_Name: Right Quad
-  m_TagString: Untagged
+  m_TagString: chunkyKid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1344,7 +1358,7 @@ GameObject:
   - component: {fileID: 6881481480756406066}
   m_Layer: 0
   m_Name: Left Quad
-  m_TagString: Untagged
+  m_TagString: chunkyKid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1535,7 +1549,7 @@ GameObject:
   - component: {fileID: 6037092409337269038}
   m_Layer: 0
   m_Name: Left Calf
-  m_TagString: Untagged
+  m_TagString: chunkyKid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
