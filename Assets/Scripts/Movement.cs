@@ -15,7 +15,7 @@ public class Movement : MonoBehaviour
     public Vector3 VelocityRight;
     public Vector3 VelocityLeft;
     public Vector3 VelocityUp;
-
+    public Vector3 maxVelocity;
     public float maxAngleR = 45f;
     public float maxAngleL = 45f;
     public float legSpeed = 10f;
@@ -30,6 +30,7 @@ public class Movement : MonoBehaviour
         VelocityRight = new Vector3(runSpeed, 0, 0);
         VelocityLeft = new Vector3(-runSpeed, 0, 0);
         VelocityUp = new Vector3(0, jumpPower, 0);
+        maxVelocity = new Vector3(0, jumpPower, 0);
         legR = this.gameObject.transform.GetChild(2).GetChild(0).gameObject;
         legL = this.gameObject.transform.GetChild(2).GetChild(1).gameObject;
         
@@ -91,8 +92,14 @@ public class Movement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.UpArrow) && isGrounded)
         {
-            rb.AddForce(VelocityUp, ForceMode.Impulse);
             isGrounded = false;
+            if (rb.velocity.y < maxVelocity.y)
+            {
+                rb.AddForce(VelocityUp, ForceMode.Impulse);
+            }
+            
+           
+           
             //rb.MovePosition(rb.position + VelocityUp * Time.fixedDeltaTime);
         }
 
