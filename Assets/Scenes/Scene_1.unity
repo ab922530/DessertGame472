@@ -489,7 +489,7 @@ MonoBehaviour:
   uitLevel: {fileID: 1942887755}
   uitPoints: {fileID: 1961758740}
   uitHighScore: {fileID: 1239460385}
-  uitLives: {fileID: 0}
+  uitLives: {fileID: 2065545844}
   tables:
   - {fileID: 7224448454916829146, guid: 8b5c5b87dad04f448bef223acf2570b1, type: 3}
   - {fileID: 7224448454916829146, guid: a216c300b48f1b24b82c1419baf78e3b, type: 3}
@@ -895,7 +895,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Lives: None Sorry'
+  m_Text: 'Lives: Dead AF'
 --- !u!222 &2065545845
 CanvasRenderer:
   m_ObjectHideFlags: 0
