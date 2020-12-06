@@ -100,7 +100,7 @@ public class Movement : MonoBehaviour
 
     void OnCollisionStay()
     {
-        Debug.Log("hello");
+        //Debug.Log("hello");
         isGrounded = true;
     }
 }
