@@ -13,6 +13,8 @@ public class GameControl : MonoBehaviour
     public Text uitPoints;  // The UIText_Points Text
     public Text uitHighScore; // The UIText_HighScore Text
     public Text uitLives;
+    public Text uitLives; // The UIText_HighScore Text
+
     public GameObject[] tables;   // An array of the levels
 
 
