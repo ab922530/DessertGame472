@@ -31,7 +31,7 @@ public class LifeLoss : MonoBehaviour
             count--;
             GameControl.lives = count;
         }
-
+        Destroy(this.gameObject);
     }
 
 }
