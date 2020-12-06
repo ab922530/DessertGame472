@@ -8,9 +8,9 @@ public class GameControl : MonoBehaviour
 
     [Header("set in insepctor")]
 
-    public Text uitLevel;  // The UIText_Level Text
-    public Text uitPoints;  // The UIText_Shots Text
-    public Text uitHighScore; // The UIText_HighScore Text
+    //public Text uitLevel;  // The UIText_Level Text
+    //public Text uitPoints;  // The UIText_Points Text
+    //public Text uitHighScore; // The UIText_HighScore Text
     public GameObject[] tables;   // An array of the levels
 
 
