@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HitBoxCollision : MonoBehaviour
+public class OuchBoxScript : MonoBehaviour
 {
     EvilVeggie pscript;
     // Start is called before the first frame update
     void Start()
     {
-        pscript = transform.parent.gameObject.GetComponent<EvilVeggie>();
+        //pscript = transform.parent.gameObject.GetComponent<InsertLifeLostScriptHere>();
     }
 
     // Update is called once per frame
@@ -19,10 +19,10 @@ public class HitBoxCollision : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if(col.tag == "chunkyKid")
+        if (col.tag == "chunkyKid")
         {
-            pscript.Invoke("die", 0f);
+          //  pscript.Invoke("livelostmethod", 0f);
         }
-         
+
     }
 }

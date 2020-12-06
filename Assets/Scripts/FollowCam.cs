@@ -16,7 +16,7 @@ public class FollowCam : MonoBehaviour
     {
         float charPosX = transform.position.x;
         float charPosZ = transform.position.z - 15f;
-        float cameraOffset = -4;
+        float cameraOffset = -5;
 
         Camera.main.transform.position = new Vector3(charPosX, cameraOffset, charPosZ);
 
