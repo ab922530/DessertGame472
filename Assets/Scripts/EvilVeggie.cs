@@ -10,6 +10,7 @@ public class EvilVeggie : MonoBehaviour
     public float moveSpeed = 5.0f;
     public float jumpHeight = 0.0f;
     public float deathDuration = 5.0f;
+    public GameObject Veggie;
     [Header("Set Dynmically")]
     public Vector3 StartingPos;
     public Vector3 CurrentPos;
@@ -25,7 +26,7 @@ public class EvilVeggie : MonoBehaviour
     {
         S = this;
         dead = false;
-        StartingPos = this.transform.position;
+        StartingPos = transform.position;
         VelocityRight = new Vector3(moveSpeed, 0, 0);
         VelocityLeft = new Vector3(-moveSpeed, 0, 0);
         StartScale = this.transform.localScale;
@@ -47,7 +48,7 @@ public class EvilVeggie : MonoBehaviour
         if (dead == false)
         {
             StartingPos.x = Mathf.PingPong(Time.time * moveSpeed, moveRange);
-            this.transform.position = StartingPos;
+            transform.position = StartingPos;
 
             if (jumpHeight > 0)
             {
@@ -57,8 +58,7 @@ public class EvilVeggie : MonoBehaviour
         else
         {
             dead = true;
-            StartingPos = this.transform.position;
-            this.transform.position = this.transform.position;
+          
             float timer = 0.0f;
             while (timer < deathDuration)
             {
@@ -74,11 +74,11 @@ public class EvilVeggie : MonoBehaviour
         
     }
 
-    public static void die()
+    public void die()
     {
-        S.dead = true;
+        this.dead = true;
     }
-
+   
     public void killVeggie()
     {
         
@@ -90,5 +90,6 @@ public class EvilVeggie : MonoBehaviour
 
         this.transform.position = new Vector3(1000, 1000, 1000);
     }
+
 
 }
