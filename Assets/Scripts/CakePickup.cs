@@ -27,6 +27,5 @@ public class CakePickup : MonoBehaviour
             Debug.Log("hit");
             Destroy(this.gameObject);
         }
-
     }
 }

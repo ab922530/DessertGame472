@@ -49,8 +49,10 @@ public class GameControl : MonoBehaviour
         UpdateGUI();
 
         // If goal met, start next level
-        //if (Goal.goalMet)
-        //    Invoke("NextLevel", 2f);
+        if (Finish.finishMet == true)
+        {
+            Invoke("NextLevel", 0f);
+        }
     }
 
     void StartLevel()
@@ -63,7 +65,7 @@ public class GameControl : MonoBehaviour
         table = Instantiate<GameObject>(tables[level]);
         table.transform.position = Vector3.zero;
 
-       //Finish.finishMet = false;
+        Finish.finishMet = false;
     }
 
     void NextLevel()
@@ -71,9 +73,11 @@ public class GameControl : MonoBehaviour
         //HighScore.CheckScoreBeaten();
         level++;
 
+
         if (level == levelMax)
         {
             level = 0;
+            print("finish has been met");
         }
 
         StartLevel();
