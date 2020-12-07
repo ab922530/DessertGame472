@@ -57,11 +57,11 @@ public class GameControl : MonoBehaviour
 
     void StartLevel()
     {
-        // Get rid of the old maze if one exists
+        // Get rid of the old table if one exists
         if (table != null)
             Destroy(table);
 
-        // Instantiate the new maze
+        // Instantiate the new table
         table = Instantiate<GameObject>(tables[level]);
         table.transform.position = Vector3.zero;
 
@@ -72,14 +72,6 @@ public class GameControl : MonoBehaviour
     {
         //HighScore.CheckScoreBeaten();
         level++;
-
-
-        if (level == levelMax)
-        {
-            level = 0;
-            print("finish has been met");
-        }
-
         StartLevel();
     }
 }
