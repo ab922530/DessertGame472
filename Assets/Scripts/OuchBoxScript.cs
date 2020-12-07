@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class OuchBoxScript : MonoBehaviour
 {
-    EvilVeggie pscript;
+    //EvilVeggie pscript;
     // Start is called before the first frame update
     void Start()
     {
-        //pscript = transform.parent.gameObject.GetComponent<InsertLifeLostScriptHere>();
+        //pscript = transform.parent.gameObject.GetComponent<LifeLoss>();
     }
 
     // Update is called once per frame
@@ -21,7 +21,8 @@ public class OuchBoxScript : MonoBehaviour
     {
         if (col.tag == "chunkyKid")
         {
-          //  pscript.Invoke("livelostmethod", 0f);
+            //pscript.Invoke("LifeLoss", 0f);
+            
         }
 
     }

@@ -714,6 +714,8 @@ GameObject:
   - component: {fileID: -4508185317218683571}
   - component: {fileID: 6157780931419160415}
   - component: {fileID: 728158314972188178}
+  - component: {fileID: -4152973418790764155}
+  - component: {fileID: -7600277189462327553}
   m_Layer: 0
   m_Name: Chunky Kid
   m_TagString: chunkyKid
@@ -803,6 +805,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 5}
   m_Center: {x: 3.2, y: 0, z: 0}
+--- !u!114 &-4152973418790764155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14547979731208615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6c0abbe80bbb1c48930f26a4c8563df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 14547979731208615}
+--- !u!114 &-7600277189462327553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14547979731208615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c83a1e3459a90447a395c10e99e731c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 0
 --- !u!1 &14547979733534077
 GameObject:
   m_ObjectHideFlags: 0
