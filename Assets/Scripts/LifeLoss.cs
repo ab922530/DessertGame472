@@ -5,7 +5,10 @@ using UnityEngine.UI;
 
 public class LifeLoss : MonoBehaviour
 {
+    [Header("Set in  Inspector")]
     int count;
+    [Header("Set Dynamically")]
+    public GameObject Player;
     void Start()
     {
         
@@ -32,6 +35,7 @@ public class LifeLoss : MonoBehaviour
             GameControl.lives = count;
         }
         Destroy(this.gameObject);
+        Instantiate(Player);
     }
 
 }
