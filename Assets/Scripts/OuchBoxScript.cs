@@ -6,6 +6,7 @@ public class OuchBoxScript : MonoBehaviour
 {
     //EvilVeggie pscript;
     // Start is called before the first frame update
+    int count;
     void Start()
     {
         //pscript = transform.parent.gameObject.GetComponent<LifeLoss>();
@@ -21,8 +22,11 @@ public class OuchBoxScript : MonoBehaviour
     {
         if (col.tag == "chunkyKid")
         {
-            //pscript.Invoke("LifeLoss", 0f);
-            
+            Debug.Log("OUCH");
+            count = GameControl.lives;
+            count--;
+            GameControl.lives = count;
+
         }
 
     }

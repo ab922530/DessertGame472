@@ -6,6 +6,7 @@ public class CakePickup : MonoBehaviour
 {
     Rigidbody rb;
     Vector3 angleturn;
+    public int count = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,9 @@ public class CakePickup : MonoBehaviour
     {
         if (col.tag == "chunkyKid")
         {
+            count = GameControl.score;
+            count = count + 100;
+            GameControl.score = count;
             Debug.Log("hit");
             Destroy(this.gameObject);
         }

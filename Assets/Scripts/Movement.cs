@@ -10,12 +10,13 @@ public class Movement : MonoBehaviour
     public GameObject legR;
     public GameObject legL;
     public float runSpeed = 10f;
-    public float jumpPower = 20f;
-
+    public float jumpPower = 50f;
+    public int count;
     public Vector3 VelocityRight;
     public Vector3 VelocityLeft;
     public Vector3 VelocityUp;
     public Vector3 maxVelocity;
+    public Vector3 startPos;
     public float maxAngleR = 45f;
     public float maxAngleL = 45f;
     public float legSpeed = 10f;
@@ -25,6 +26,7 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        startPos = this.transform.position;
         Debug.Log("Movement");
         rb = GetComponent<Rigidbody>();
         VelocityRight = new Vector3(runSpeed, 0, 0);
@@ -41,8 +43,19 @@ public class Movement : MonoBehaviour
     {
        // legR.transform.rotation = Quaternion.Euler(0, 0, 45);
         run();
+        checkPos();
     }
+    void checkPos()
+    {
+        if (this.transform.position.y < -25)
+        {
+            count = GameControl.lives;
+            count--;
+            GameControl.lives = count;
+            this.transform.position = startPos;
+        }
 
+    }
     void run()
     {
         if (Input.GetKey(KeyCode.RightArrow))
@@ -95,6 +108,7 @@ public class Movement : MonoBehaviour
             isGrounded = false;
             if (rb.velocity.y < maxVelocity.y)
             {
+                
                 rb.AddForce(VelocityUp, ForceMode.Impulse);
             }
             

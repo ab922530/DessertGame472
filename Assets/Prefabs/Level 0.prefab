@@ -1291,6 +1291,10 @@ PrefabInstance:
       propertyPath: VelocityLeft.x
       value: -10
       objectReference: {fileID: 0}
+    - target: {fileID: -4508185317218683571, guid: 60533252123a135469de4cc357d80c8d, type: 3}
+      propertyPath: jumpPower
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 14547979731208614, guid: 60533252123a135469de4cc357d80c8d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.243851
