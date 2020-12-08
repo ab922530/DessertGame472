@@ -504,7 +504,7 @@ MonoBehaviour:
   uitPoints: {fileID: 1961758740}
   uitLives: {fileID: 2065545844}
   tables:
-  - {fileID: 7224448454916829146, guid: 8b5c5b87dad04f448bef223acf2570b1, type: 3}
+  - {fileID: 7224448454916829146, guid: 56f3745288ee8b84fa88d89658200d15, type: 3}
   - {fileID: 7224448454916829146, guid: 41d7e548032e45f46b033fbbaa2ed817, type: 3}
   - {fileID: 7224448454916829146, guid: a216c300b48f1b24b82c1419baf78e3b, type: 3}
   - {fileID: 7224448454916829146, guid: 372aa53e6954e0f48a6e50a08245d161, type: 3}

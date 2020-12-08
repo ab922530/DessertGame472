@@ -33,6 +33,7 @@ MonoBehaviour:
   jumpHeight: 0
   deathDuration: 5
   Veggie: {fileID: 0}
+  ouchBox: {fileID: 0}
   StartingPos: {x: 0, y: 0, z: 0}
   CurrentPos: {x: 0, y: 0, z: 0}
   VelocityRight: {x: 0, y: 0, z: 0}
@@ -435,6 +436,7 @@ MonoBehaviour:
   jumpHeight: 0
   deathDuration: 5
   Veggie: {fileID: 0}
+  ouchBox: {fileID: 0}
   StartingPos: {x: 0, y: 0, z: 0}
   CurrentPos: {x: 0, y: 0, z: 0}
   VelocityRight: {x: 0, y: 0, z: 0}
