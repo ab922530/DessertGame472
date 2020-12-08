@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossScript : MonoBehaviour
 {
@@ -35,7 +36,7 @@ public class BossScript : MonoBehaviour
             }
 
             this.transform.position = new Vector3(1000, 1000, 1000);
-            finish();
+            Invoke("finish", 3f) ;
         }
     }
    
@@ -49,13 +50,8 @@ void makeMinion()
 
     void finish()
     {
-        if(i  == 1)
-        {
-            Instantiate(cake, new Vector3(22,-9,-9), Quaternion.Euler(0,0,0));
-            i++;
-           
-        }
 
+        SceneManager.LoadScene("Win", LoadSceneMode.Single);
 
     }
 }
