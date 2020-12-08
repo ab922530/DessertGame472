@@ -52,7 +52,7 @@ public class GameControl : MonoBehaviour
         UpdateUI();
 
         // End game if out of lives or levels
-        if (lives == 0)
+        if (lives <= 0)
         {
             GameOver();
             return;
