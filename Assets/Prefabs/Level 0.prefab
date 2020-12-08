@@ -789,6 +789,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Location
       objectReference: {fileID: 0}
+    - target: {fileID: 661377074596390626, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 917737790250826668, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527968620573536342, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 1647718330313697017, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856566144557299457, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2722063205289083366, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2781056125441811388, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 2822790568792999573, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
     - target: {fileID: 3051222983036001962, guid: 2cca860c20d732e49b17327939fe7e76,
         type: 3}
       propertyPath: m_IsKinematic
@@ -799,10 +839,110 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3243344187953270010, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3376791507386744181, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610278159677204302, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036707639417482789, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4071225559587502735, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293481377081220877, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018716326506278969, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 5084197781055334248, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5153105507955547002, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707926007176524041, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783472908022547284, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6142802752569426979, guid: 2cca860c20d732e49b17327939fe7e76,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6146833821033243565, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399197704824161170, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399197704824436528, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559736638660656010, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098595951923073127, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7351826505916371073, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8492612881112006101, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604668351878343674, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 9152255662120542406, guid: 2cca860c20d732e49b17327939fe7e76,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cca860c20d732e49b17327939fe7e76, type: 3}
@@ -2517,6 +2657,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dining Chair 3
       objectReference: {fileID: 0}
+    - target: {fileID: 160974, guid: 4cecbd24f2a3841a4957c2e896c8e81c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 409708, guid: 4cecbd24f2a3841a4957c2e896c8e81c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.196
@@ -3267,6 +3411,10 @@ PrefabInstance:
     - target: {fileID: 160974, guid: 4cecbd24f2a3841a4957c2e896c8e81c, type: 3}
       propertyPath: m_Name
       value: Dining Chair 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 160974, guid: 4cecbd24f2a3841a4957c2e896c8e81c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 409708, guid: 4cecbd24f2a3841a4957c2e896c8e81c, type: 3}
       propertyPath: m_LocalPosition.x
