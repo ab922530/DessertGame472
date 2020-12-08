@@ -13,6 +13,7 @@ public class GameControl : MonoBehaviour
     public Text uitPoints;  // The UIText_Points Text
     //public Text uitHighScore; // The UIText_HighScore Text
     public Text uitLives; // The UIText_HighScore Text
+    public Text uiGameOver; // The UIText_GameOver Text
 
     public GameObject[] tables;   // An array of the levels
 
@@ -32,12 +33,14 @@ public class GameControl : MonoBehaviour
         score = 0;
         levelMax = tables.Length;
         lives = 3;
+        uiGameOver.enabled = false;
+
         StartLevel();
     }
 
-    void UpdateGUI()
+    void UpdateUI()
     {
-        // Show the data in the GUITexts
+        // Show the data in the UITexts
         uitLevel.text = "Level: " + (level + 1) + " of " + levelMax;
         uitLives.text = "Lives: " + lives;
         uitPoints.text = "Points: " + score;
@@ -46,7 +49,14 @@ public class GameControl : MonoBehaviour
 
     void Update()
     {
-        UpdateGUI();
+        UpdateUI();
+
+        // End game if out of lives or levels
+        if (lives == 0)
+        {
+            GameOver();
+            return;
+        }
 
         // If goal met, start next level
         if (Finish.finishMet == true)
@@ -72,6 +82,21 @@ public class GameControl : MonoBehaviour
     {
         //HighScore.CheckScoreBeaten();
         level++;
+
+        if (level >= levelMax)
+        {
+            GameOver();
+            return;
+        }
+
         StartLevel();
+    }
+
+    void GameOver()
+    {
+        Destroy(table);
+        uiGameOver.enabled = true;
+        uiGameOver.text = "Game Over!\n"
+                        + "High Score: " + PlayerPrefs.GetInt("UIText_HighScore", 10).ToString();
     }
 }
