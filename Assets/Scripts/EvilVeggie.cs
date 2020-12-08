@@ -11,6 +11,7 @@ public class EvilVeggie : MonoBehaviour
     public float jumpHeight = 0.0f;
     public float deathDuration = 5.0f;
     public GameObject Veggie;
+    public GameObject ouchBox;
     [Header("Set Dynmically")]
     public Vector3 StartingPos;
     public Vector3 CurrentPos;
@@ -32,6 +33,7 @@ public class EvilVeggie : MonoBehaviour
         VelocityLeft = new Vector3(-moveSpeed, 0, 0);
         StartScale = this.transform.localScale;
         DeadScale = new Vector3(this.transform.localScale.x, this.transform.localScale.y, 1);
+        ouchBox = this.gameObject.transform.GetChild(2).gameObject;
 
     }
 
@@ -78,6 +80,7 @@ public class EvilVeggie : MonoBehaviour
 
     public void die()
     {
+        Destroy(ouchBox);
         this.dead = true;
     }
    
