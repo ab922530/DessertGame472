@@ -62,6 +62,7 @@ public class GameControl : MonoBehaviour
         if (lives <= 0)
         {
             GameOver();
+            lives = 0;
             return;
         }
 
