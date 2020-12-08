@@ -770,11 +770,13 @@ MonoBehaviour:
   legR: {fileID: 0}
   legL: {fileID: 0}
   runSpeed: 10
-  jumpPower: 5
-  VelocityRight: {x: 0, y: 0, z: 0}
-  VelocityLeft: {x: 0, y: 0, z: 0}
+  jumpPower: 12
+  count: 0
+  VelocityRight: {x: 10, y: 0, z: 0}
+  VelocityLeft: {x: -10, y: 0, z: 0}
   VelocityUp: {x: 0, y: 0, z: 0}
   maxVelocity: {x: 0, y: 0, z: 0}
+  startPos: {x: 0, y: 0, z: 0}
   maxAngleR: 45
   maxAngleL: 45
   legSpeed: 10
