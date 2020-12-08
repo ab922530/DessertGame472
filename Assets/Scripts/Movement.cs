@@ -31,8 +31,8 @@ public class Movement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         VelocityRight = new Vector3(runSpeed, 0, 0);
         VelocityLeft = new Vector3(-runSpeed, 0, 0);
-        VelocityUp = new Vector3(0, jumpPower, 0);
-        maxVelocity = new Vector3(0, jumpPower, 0);
+        VelocityUp = new Vector3(0, 12f, 0);
+        maxVelocity = new Vector3(0, 12f, 0);
         legR = this.gameObject.transform.GetChild(2).GetChild(0).gameObject;
         legL = this.gameObject.transform.GetChild(2).GetChild(1).gameObject;
         
