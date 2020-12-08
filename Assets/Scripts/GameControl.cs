@@ -11,9 +11,10 @@ public class GameControl : MonoBehaviour
 
     public Text uitLevel;  // The UIText_Level Text
     public Text uitPoints;  // The UIText_Points Text
-    //public Text uitHighScore; // The UIText_HighScore Text
+    public Text uitHighScore; // The UIText_HighScore Text
     public Text uitLives; // The UIText_HighScore Text
     public Text uiGameOver; // The UIText_GameOver Text
+    
 
     public GameObject[] tables;   // An array of the levels
 
@@ -34,6 +35,7 @@ public class GameControl : MonoBehaviour
         levelMax = tables.Length;
         lives = 3;
         uiGameOver.enabled = false;
+        uitHighScore.text = "HighScore: " + PlayerPrefs.GetInt("UIText_HighScore", 10).ToString();
 
         StartLevel();
     }
@@ -44,7 +46,12 @@ public class GameControl : MonoBehaviour
         uitLevel.text = "Level: " + (level + 1) + " of " + levelMax;
         uitLives.text = "Lives: " + lives;
         uitPoints.text = "Points: " + score;
-        ScoreScript.scoreValue = score;
+
+        if (score > PlayerPrefs.GetInt("UIText_HighScore", 10))
+        {
+            PlayerPrefs.SetInt("UIText_HighScore", score);
+            uitHighScore.text = "HighScore: " + score;
+        }
     }
 
     void Update()
