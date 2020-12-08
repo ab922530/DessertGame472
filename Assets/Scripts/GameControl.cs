@@ -11,8 +11,7 @@ public class GameControl : MonoBehaviour
 
     public Text uitLevel;  // The UIText_Level Text
     public Text uitPoints;  // The UIText_Points Text
-    public Text uitHighScore; // The UIText_HighScore Text
-    //public Text uitLives;
+    //public Text uitHighScore; // The UIText_HighScore Text
     public Text uitLives; // The UIText_HighScore Text
 
     public GameObject[] tables;   // An array of the levels
@@ -42,6 +41,7 @@ public class GameControl : MonoBehaviour
         uitLevel.text = "Level: " + (level + 1) + " of " + levelMax;
         uitLives.text = "Lives: " + lives;
         uitPoints.text = "Points: " + score;
+        ScoreScript.scoreValue = score;
     }
 
     void Update()
