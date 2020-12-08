@@ -6,7 +6,7 @@ public class EvilVeggie : MonoBehaviour
 {
     public static EvilVeggie S;
     [Header("Set in Inspector")]
-    public float moveRange = 5.0f;
+    public float moveRange = 9.0f;
     public float moveSpeed = 5.0f;
     public float jumpHeight = 0.0f;
     public float deathDuration = 5.0f;
@@ -26,7 +26,8 @@ public class EvilVeggie : MonoBehaviour
     {
         S = this;
         dead = false;
-        StartingPos = transform.position;
+        StartingPos = this.transform.position;
+        CurrentPos = StartingPos; 
         VelocityRight = new Vector3(moveSpeed, 0, 0);
         VelocityLeft = new Vector3(-moveSpeed, 0, 0);
         StartScale = this.transform.localScale;
@@ -39,7 +40,7 @@ public class EvilVeggie : MonoBehaviour
     {
         // CurrentPos = this.transform.position;
         
-        move();   
+        this.move();   
     }
 
     void move()
@@ -47,8 +48,9 @@ public class EvilVeggie : MonoBehaviour
 
         if (dead == false)
         {
-            StartingPos.x = Mathf.PingPong(Time.time * moveSpeed, moveRange);
-            transform.position = StartingPos;
+            //Mathf.Lerp(min, max, Mathf.Pingpong(Time.time, 1));
+            this.CurrentPos.x = Mathf.Lerp(this.StartingPos.x, this.StartingPos.x+ moveRange,Mathf.PingPong(Time.time, 1));
+            this.transform.position = this.CurrentPos;
 
             if (jumpHeight > 0)
             {
