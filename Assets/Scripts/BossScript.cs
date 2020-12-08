@@ -26,7 +26,7 @@ public class BossScript : MonoBehaviour
     {
        
 
-        if(Time.time > 2f)
+        if(Time.time > 25f)
         {
             make = false;
             foreach (Transform child in this.transform)
