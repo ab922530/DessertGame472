@@ -2,12 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ReloadGame : MonoBehaviour
 {
-    public void OnButtonClick()
+    public Button but;
+    public void Start()
     {
-        SceneManager.LoadScene("Scene1", LoadSceneMode.Single);
+        but.onClick.AddListener(TaskOnClick);
+    }
+    public void TaskOnClick()
+    {
+        SceneManager.LoadScene("Scene_1", LoadSceneMode.Single);
     }
 
 }

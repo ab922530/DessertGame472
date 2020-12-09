@@ -44,10 +44,10 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-       // legR.transform.rotation = Quaternion.Euler(0, 0, 45);
+    
         run();
         checkPos();
-        //checkSpikes();
+    
     }
     void checkPos()
     {
@@ -70,10 +70,7 @@ public class Movement : MonoBehaviour
             //character movement
             rb.MovePosition(rb.position + VelocityRight * Time.fixedDeltaTime);
 
-           /* if (this.transform.rotation != Quaternion.Euler(0, 0, 0))
-            {
-                this.transform.rotation = Quaternion.Euler(0, 0, 0);
-            }*/
+       
 
             //leg animation
             float angle = maxAngleR * Mathf.Sin(Time.time * legSpeed);
@@ -90,12 +87,7 @@ public class Movement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            //flip direction
-           /* if (this.transform.rotation != Quaternion.Euler(0, 180, 0))
-            {
-                this.transform.rotation = Quaternion.Euler(0, 180, 0);
-            }*/
-            //character movement
+           
             rb.MovePosition(rb.position + VelocityLeft * Time.fixedDeltaTime);
 
            
@@ -122,14 +114,14 @@ public class Movement : MonoBehaviour
             
            
            
-            //rb.MovePosition(rb.position + VelocityUp * Time.fixedDeltaTime);
+           
         }
 
     }
 
     void OnCollisionStay()
     {
-        //Debug.Log("hello");
+    
         isGrounded = true;
     }
 }

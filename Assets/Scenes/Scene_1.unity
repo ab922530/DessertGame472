@@ -466,6 +466,7 @@ GameObject:
   - component: {fileID: 1321648657}
   - component: {fileID: 1321648656}
   - component: {fileID: 1321648659}
+  - component: {fileID: 1321648660}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -557,7 +558,7 @@ MonoBehaviour:
   uiGameOver: {fileID: 1115160320}
   buttonImage: {fileID: 2044499579}
   tables:
-  - {fileID: 7224448454916829146, guid: 56f3745288ee8b84fa88d89658200d15, type: 3}
+  - {fileID: 7224448454916829146, guid: 8b5c5b87dad04f448bef223acf2570b1, type: 3}
   - {fileID: 7224448454916829146, guid: 41d7e548032e45f46b033fbbaa2ed817, type: 3}
   - {fileID: 7224448454916829146, guid: a216c300b48f1b24b82c1419baf78e3b, type: 3}
   - {fileID: 7224448454916829146, guid: 372aa53e6954e0f48a6e50a08245d161, type: 3}
@@ -565,6 +566,19 @@ MonoBehaviour:
   - {fileID: 7224448454916829146, guid: 56f3745288ee8b84fa88d89658200d15, type: 3}
   levelMax: 0
   table: {fileID: 0}
+--- !u!114 &1321648660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321648655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 189796157bc043546987af6cf19bff55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  but: {fileID: 2044499581}
 --- !u!1 &1833331820
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,6 +1052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189796157bc043546987af6cf19bff55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  but: {fileID: 2044499581}
 --- !u!1 &2065545842
 GameObject:
   m_ObjectHideFlags: 0
