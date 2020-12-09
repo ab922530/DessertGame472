@@ -112,6 +112,7 @@ public class Movement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.UpArrow) && isGrounded)
         {
+            Debug.Log("jumpCalled");
             isGrounded = false;
             if (rb.velocity.y < maxVelocity.y)
             {
