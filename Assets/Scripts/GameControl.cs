@@ -33,7 +33,7 @@ public class GameControl : MonoBehaviour
         level = 0;
         score = 0;
         levelMax = tables.Length;
-        lives = 3;
+        lives = 10;
         uiGameOver.enabled = false;
         buttonImage.SetActive(false);
         uitHighScore.text = "HighScore: " + PlayerPrefs.GetInt("UIText_HighScore", 10).ToString();
